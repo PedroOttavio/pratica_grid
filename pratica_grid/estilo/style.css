@@ -1,0 +1,214 @@
+/* limpa os estilos pré existentes no navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container {
+    display: grid;
+    gap: 10px; /* Mais espaços */
+}
+
+/* adaptação para largura mínima de 600px */
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: repeat(12, 1fr); /* 12 colunas iguais */
+    }
+
+    .col-1 { grid-column: span 1; }
+    .col-2 { grid-column: span 2; }
+    .col-3 { grid-column: span 3; }
+    .col-4 { grid-column: span 4; }
+    .col-5 { grid-column: span 5; }
+    .col-6 { grid-column: span 6; }
+    .col-7 { grid-column: span 7; }
+    .col-8 { grid-column: span 8; }
+    .col-9 { grid-column: span 9; }
+    .col-10 { grid-column: span 10; }
+    .col-11 { grid-column: span 11; }
+    .col-12 { grid-column: span 12; }
+
+    .header {
+        grid-column: span 12;
+        background-color: lightblue;
+    }
+
+    .sidebar {
+        grid-column: span 3;
+        background-color: lightgreen;
+    }
+
+    .main {
+        grid-column: span 9;
+        background-color: lightcoral;
+    }
+
+    .footer {
+        grid-column: span 12;
+        background-color: lightgoldenrodyellow;
+    }
+}
+
+/* adaptação para largura inferior a 600px */
+@media (max-width: 599px) {
+    .container {
+        grid-template-columns: 1fr; /* Uma única coluna */
+    }
+
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+    .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+        grid-column: span 1; /* ocupar a linha inteira*/
+    }
+
+
+
+}
+
+.item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #C7C8CC;
+
+}
+
+
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; /* o espaço entre as imagens */
+}
+
+.col-2 img {
+    width: 100%; 
+    height: auto; 
+}
+
+/* Imagens patrocinadores - manipular posição delas */
+.col-2 img:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.col-2 img:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.col-2 img:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.col-2 img:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* imagem dos patrocinadores - telas menores */
+@media (max-width: 599px) {
+    .col-2 {
+        grid-template-columns: 1fr 1fr; /* Mantém duas colunas */
+        gap: 5px; /* Reduz o espaço entre as imagens */
+    }
+
+    /* Mantendo as posições das imagens na grade */
+    .col-2 img:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .col-2 img:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .col-2 img:nth-child(3) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .col-2 img:nth-child(4) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+/* parte de inscrição */
+
+.inscricao h2{
+    font-weight: bold;
+    color: black;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+
+.dadosComprador{
+    margin: 0 auto;
+	padding: 0px;
+	border: 0;
+	font-size: 12px;
+	background-color: #cccccc;
+    position: relative;
+
+}
+
+
+fieldset{
+	border: 0;
+	margin: 0;
+	border: 3px solid #000000; 
+	padding: 10px;
+}
+
+button{
+	padding: 5px;
+	border: 0;
+	font-size: 14px;
+	margin: 0;
+	margin-top: 3px;
+	color: #ffffff;
+	background-color:#000000;
+	width: 100px;
+    height: 40px;
+}
+
+
+h1{
+padding:5px;
+font-size:32px;    
+}
+
+input[type=text]{
+	border: 1px solid #ccc;
+	padding: 10px;
+    margin-bottom: 10px;
+	}
+
+label{
+	color: #000000;
+	font-size:14px;
+	margin-bottom: 2px;
+	width: 100px;
+	display: inline-block;
+	/* inline-block permite determinr width: */
+    font-weight: bold;
+}
+
+legend{font-size:16px;
+}
+
+
+
+
+
